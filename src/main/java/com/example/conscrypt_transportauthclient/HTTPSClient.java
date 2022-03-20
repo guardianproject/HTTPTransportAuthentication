@@ -101,14 +101,14 @@ public class HTTPSClient {
             System.out.println(" Usage error: Please specify the mechnisum");
             return;
         }
-	if (args[0].equals("HMAC")) {
-	    authMechanisum=args[0];
-	} else if(args[0].equals("Signature")) {
-	    authMechanisum=args[0];
-	} else {
-	    System.out.println(" Usage error: Please specify the mechnisum");
-	    return;
-	}
+        if (args[0].equals("HMAC")) {
+            authMechanisum=args[0];
+        } else if(args[0].equals("Signature")) {
+            authMechanisum=args[0];
+        } else {
+            System.out.println(" Usage error: Please specify the mechnisum");
+            return;
+        }
 
         if (args != null && args.length > 1) {
             loadConfig(args[1]);
@@ -463,7 +463,7 @@ public class HTTPSClient {
                                     System.out.println("Client Received : "+line);
 
                                     if(line.trim().startsWith("HTTP/1.0 200")){
-					System.out.println("Got 200, done!");
+                                        System.out.println("Got 200, done!");
                                         break;
                                     }
                                 }
